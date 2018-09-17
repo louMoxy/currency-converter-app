@@ -1,21 +1,13 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import Home from "./screens/Home";
+import EStyleSheet from "react-native-extended-stylesheet";
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Building currency converter</Text>
-      </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+EStyleSheet.build({
+  $primaryBlue: "#4F6D7A",
+  $white: "#fff",
+  $border: "#e2e2e2",
+  $inputText: "#797979",
+  $lightGrey: "#f0f0f0"
 });
+
+export default () => <Home />;
