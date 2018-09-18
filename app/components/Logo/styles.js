@@ -4,17 +4,25 @@ import { Dimensions } from "react-native";
 const imageWidth = Dimensions.get("window").width / 2;
 
 export default EStyleSheet.create({
+  $largeContainerSize: imageWidth,
+  $largeImageSize: imageWidth / 2,
+  $largeImagePadding: imageWidth / 4,
+  $smallContainerSize: imageWidth / 2,
+  $smallImageSize: imageWidth / 4,
+  $smallImagePadding: imageWidth / 8,
   logoBackground: {
     alignItems: "center",
     justifyContent: "center",
-    width: imageWidth,
-    height: imageWidth
+    width: "$largeContainerSize",
+    height: "$largeContainerSize"
   },
   container: {
     alignItems: "center"
   },
   logoImage: {
-    width: imageWidth / 2
+    width: "$largeImageSize",
+    position: "absolute",
+    top: "$largeImagePadding"
   },
   text: {
     fontWeight: "bold",
