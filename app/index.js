@@ -1,10 +1,13 @@
 import React from "react";
 import Home from "./screens/Home";
-import OptionScreen from "./screens/OptionScreen";
+import Themes from "./screens/Themes";
 import EStyleSheet from "react-native-extended-stylesheet";
 
 EStyleSheet.build({
   $primaryBlue: "#4F6D7A",
+  $primaryOrange: "#D57A66",
+  $primaryGreen: "#00BD9D",
+  $primaryPurple: "#9E768F",
   $white: "#fff",
   $border: "#e2e2e2",
   $inputText: "#797979",
@@ -12,4 +15,4 @@ EStyleSheet.build({
   $darkText: "#343434"
 });
 
-export default () => <OptionScreen />;
+export default () => <Themes />;
