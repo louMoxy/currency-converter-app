@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { View, ScrollView, StatusBar } from "react-native";
 import { ListItem } from "../components/List";
 import EStyleSheet from "react-native-extended-stylesheet";
+import PropTypes from "prop-types";
 
 const THEMES = [
   { name: "Blue", color: "$blue" },
@@ -18,8 +19,12 @@ const styles = EStyleSheet.create({
 });
 
 class Themes extends Component {
+  static propTypes = {
+    navigation: PropTypes.object
+  };
   handlePress = color => {
     console.log("item press", color);
+    this.props.navigation.goBack();
   };
 
   render() {
