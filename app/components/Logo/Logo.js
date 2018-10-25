@@ -68,7 +68,8 @@ class Logo extends Component {
         width: this.imageWidth,
         height: this.imageWidth,
         top: this.imagePadding
-      }
+      },
+      this.props.tintColor ? { tintColor: this.props.tintColor } : null
     ];
     const containerImageStyle = [
       styles.logoBackground,
